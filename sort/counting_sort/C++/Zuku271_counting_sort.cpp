@@ -5,7 +5,7 @@
 std::vector<int> counting_sort(const std::vector<int> &input, const unsigned int range)
 {
     const size_t n = input.size();
-    std::vector<int> count(range, 0);
+    std::vector<int> count(range + 1, 0);
     std::vector<int> result(n, 0);
 
     // Creates count array
@@ -15,7 +15,7 @@ std::vector<int> counting_sort(const std::vector<int> &input, const unsigned int
     }
 
     // Each index of count[] stores the sum of previous counts. 
-    for (size_t i = 1; i <= n; i++)
+    for (size_t i = 1; i <= range; i++)
     {
         count[i] = count[i] + count[i - 1];
     }
@@ -33,7 +33,7 @@ std::vector<int> counting_sort(const std::vector<int> &input, const unsigned int
 
 int main()
 {
-    std::vector<int> arr = {1, 4, 1, 2, 7, 5, 2};
+    std::vector<int> arr = {1, 4, 1, 2, 9, 5, 2};
 
     std::vector<int> res = counting_sort(arr, 9);
 
