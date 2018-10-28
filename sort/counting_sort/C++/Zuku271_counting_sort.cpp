@@ -33,9 +33,11 @@ std::vector<int> counting_sort(const std::vector<int> &input, const unsigned int
 
 int main()
 {
-    std::vector<int> arr = {1, 4, 1, 2, 9, 5, 2};
+    std::vector<int> arr = {1, 4, 1, 0, 10, 5, 2, 1, 11, 5};
 
-    std::vector<int> res = counting_sort(arr, 9);
+    // args: counting_sort(std::vector<int> sort_me, unsigned int max_value_in_vector)
+    // returns: std::vector<int> sorted_copy
+    std::vector<int> res = counting_sort(arr, 11);
 
     for (int t : res)
     {
