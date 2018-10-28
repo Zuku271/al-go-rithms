@@ -3,4 +3,6 @@
 
 #include <vector>
 
+std::vector<int> counting_sort();
+
 #endif
