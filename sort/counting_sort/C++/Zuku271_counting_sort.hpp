@@ -3,6 +3,6 @@
 
 #include <vector>
 
-std::vector<int> counting_sort();
+std::vector<int> counting_sort(const std::vector<int> &input, const unsigned int range);
 
 #endif
